@@ -1,0 +1,15 @@
+I spent the weekend going deep on two very different approaches to AI assistants.
+
+OpenClaw (157K GitHub stars, formerly Clawdbot) is an always-on personal AI that reaches you on WhatsApp, Telegram, Discord. It has a soul file. It works while you sleep.
+
+Claude Code (by Anthropic) is an on-demand coding agent in your terminal. Purpose-built for software engineering. No personality. Pure execution.
+
+Both are powerful. Neither replaces the other.
+
+I built an interactive learning experience that breaks down both tools through architecture diagrams, code walkthroughs, quizzes, and hands-on exercises.
+
+30 minutes. Evidence-based learning science. Completely free.
+
+https://sebastiandoyle.github.io/openclaw-vs-claude-code
+
+Built with Claude Code, naturally.

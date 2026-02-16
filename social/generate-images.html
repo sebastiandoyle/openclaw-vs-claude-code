@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OpenClaw vs Claude Code — Social Media Assets</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #0a0a0a;
+    color: #e0e0e0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    padding: 40px;
+  }
+
+  /* Navigation */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #222;
+    padding: 16px 24px;
+    margin: -40px -40px 40px -40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+  }
+  nav .nav-title {
+    font-weight: 700;
+    font-size: 14px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-right: 16px;
+  }
+  nav a {
+    color: #3498DB;
+    text-decoration: none;
+    font-size: 13px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    border: 1px solid #333;
+    transition: all 0.2s;
+  }
+  nav a:hover { background: #1a1a2e; border-color: #3498DB; }
+  nav a.linkedin { border-color: #E74C3C44; color: #E74C3C; }
+  nav a.linkedin:hover { background: #E74C3C11; }
+  nav a.twitter { border-color: #3498DB44; color: #3498DB; }
+  nav a.twitter:hover { background: #3498DB11; }
+  nav a.og { border-color: #F39C1244; color: #F39C12; }
+  nav a.og:hover { background: #F39C1211; }
+
+  /* Section labels */
+  .section-wrapper {
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .section-label {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .section-label .dims {
+    color: #444;
+    font-weight: 400;
+  }
+
+  /* Shared card styles */
+  .card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 4px 40px rgba(0,0,0,0.5);
+  }
+
+  /* ========== LINKEDIN SLIDES ========== */
+  .linkedin-slide {
+    width: 1080px;
+    height: 1350px;
+    background: #0d1117;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px;
+    position: relative;
+  }
+
+  /* Slide 1 - Cover */
+  #slide1 {
+    background: linear-gradient(160deg, #0d1117 0%, #111820 50%, #0d1117 100%);
+  }
+  #slide1 .top-label {
+    position: absolute;
+    top: 60px;
+    font-size: 18px;
+    color: #555;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+  }
+  #slide1 .title-row {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 48px;
+  }
+  #slide1 .vs-block {
+    width: 420px;
+    height: 320px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    position: relative;
+    overflow: hidden;
+  }
+  #slide1 .vs-block::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    border: 2px solid;
+    opacity: 0.3;
+  }
+  #slide1 .vs-block.red { background: #E74C3C0D; }
+  #slide1 .vs-block.red::before { border-color: #E74C3C; }
+  #slide1 .vs-block.amber { background: #F39C120D; }
+  #slide1 .vs-block.amber::before { border-color: #F39C12; }
+  #slide1 .vs-block .emoji { font-size: 72px; }
+  #slide1 .vs-block .name {
+    font-size: 36px;
+    font-weight: 700;
+  }
+  #slide1 .vs-block.red .name { color: #E74C3C; }
+  #slide1 .vs-block.amber .name { color: #F39C12; }
+  .vs-divider {
+    font-size: 48px;
+    font-weight: 800;
+    color: #fff;
+    text-shadow: 0 0 40px rgba(255,255,255,0.3);
+  }
+  #slide1 h1 {
+    font-size: 56px;
+    font-weight: 800;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+  #slide1 .subtitle {
+    font-size: 28px;
+    color: #8b949e;
+    text-align: center;
+    margin-bottom: 64px;
+  }
+  #slide1 .footer-tags {
+    position: absolute;
+    bottom: 60px;
+    display: flex;
+    gap: 20px;
+  }
+  #slide1 .footer-tags span {
+    background: #161b22;
+    border: 1px solid #30363d;
+    padding: 12px 28px;
+    border-radius: 40px;
+    font-size: 20px;
+    color: #8b949e;
+  }
+
+  /* Slide 2 - Comparison */
+  #slide2 {
+    background: linear-gradient(180deg, #0d1117 0%, #0f1419 100%);
+    padding: 60px;
+  }
+  #slide2 h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  .comparison-grid {
+    display: flex;
+    gap: 32px;
+    width: 100%;
+  }
+  .compare-col {
+    flex: 1;
+    border-radius: 16px;
+    padding: 48px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .compare-col::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    border: 1.5px solid;
+    opacity: 0.2;
+  }
+  .compare-col.red { background: #E74C3C08; }
+  .compare-col.red::before { border-color: #E74C3C; }
+  .compare-col.amber { background: #F39C1208; }
+  .compare-col.amber::before { border-color: #F39C12; }
+  .compare-col h3 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .compare-col.red h3 { color: #E74C3C; }
+  .compare-col.amber h3 { color: #F39C12; }
+  .compare-col .tagline {
+    font-size: 20px;
+    color: #8b949e;
+    margin-bottom: 36px;
+    font-style: italic;
+  }
+  .compare-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .compare-col ul li {
+    font-size: 24px;
+    color: #c9d1d9;
+    padding: 16px 20px;
+    background: #161b2288;
+    border-radius: 10px;
+    border-left: 3px solid;
+    line-height: 1.3;
+  }
+  .compare-col.red ul li { border-left-color: #E74C3C44; }
+  .compare-col.amber ul li { border-left-color: #F39C1244; }
+
+  /* Slide 3 - Architecture */
+  #slide3 {
+    background: linear-gradient(180deg, #0d1117 0%, #0f1419 100%);
+    padding: 60px 60px 80px;
+  }
+  #slide3 h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  .arch-grid {
+    display: flex;
+    gap: 40px;
+    width: 100%;
+    flex: 1;
+  }
+  .arch-panel {
+    flex: 1;
+    border-radius: 16px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .arch-panel::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    border: 1.5px solid;
+    opacity: 0.15;
+  }
+  .arch-panel.red { background: #E74C3C06; }
+  .arch-panel.red::before { border-color: #E74C3C; }
+  .arch-panel.amber { background: #F39C1206; }
+  .arch-panel.amber::before { border-color: #F39C12; }
+  .arch-panel h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .arch-panel.red h3 { color: #E74C3C; }
+  .arch-panel.amber h3 { color: #F39C12; }
+  .arch-panel .arch-subtitle {
+    font-size: 18px;
+    color: #8b949e;
+    margin-bottom: 36px;
+  }
+  .arch-diagram {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  /* Hub and spoke */
+  .hub-spoke {
+    position: relative;
+    width: 380px;
+    height: 380px;
+  }
+  .hub-center {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #E74C3C22;
+    border: 2px solid #E74C3C44;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    color: #E74C3C;
+    z-index: 2;
+  }
+  .spoke-node {
+    position: absolute;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: #161b22;
+    border: 1.5px solid #30363d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    z-index: 2;
+  }
+  .spoke-line {
+    position: absolute;
+    background: #E74C3C22;
+    height: 2px;
+    transform-origin: left center;
+    z-index: 1;
+  }
+  /* Positions for 8 spoke nodes around center (190px center) */
+  .spoke-node:nth-child(2) { top: 12px; left: 154px; }
+  .spoke-node:nth-child(3) { top: 54px; left: 280px; }
+  .spoke-node:nth-child(4) { top: 154px; left: 300px; }
+  .spoke-node:nth-child(5) { top: 264px; left: 280px; }
+  .spoke-node:nth-child(6) { top: 300px; left: 154px; }
+  .spoke-node:nth-child(7) { top: 264px; left: 28px; }
+  .spoke-node:nth-child(8) { top: 154px; left: 8px; }
+  .spoke-node:nth-child(9) { top: 54px; left: 28px; }
+
+  /* SVG lines for hub-spoke */
+  .hub-spoke svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  .hub-spoke svg line {
+    stroke: #E74C3C33;
+    stroke-width: 2;
+  }
+
+  /* Pipeline */
+  .pipeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    width: 100%;
+  }
+  .pipeline-node {
+    width: 280px;
+    padding: 20px 24px;
+    background: #161b22;
+    border: 1.5px solid #F39C1233;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 18px;
+    color: #c9d1d9;
+    font-weight: 600;
+  }
+  .pipeline-arrow {
+    width: 2px;
+    height: 28px;
+    background: #F39C1244;
+    position: relative;
+  }
+  .pipeline-arrow::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid #F39C1266;
+  }
+
+  /* Slide 4 - Key Insight */
+  #slide4 {
+    background: linear-gradient(160deg, #0d1117 0%, #111820 50%, #0d1117 100%);
+    padding: 80px;
+    gap: 48px;
+  }
+  #slide4 .quote {
+    font-size: 46px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    line-height: 1.4;
+    max-width: 900px;
+    position: relative;
+    padding: 0 20px;
+  }
+  #slide4 .quote::before {
+    content: '\201C';
+    position: absolute;
+    top: -40px;
+    left: -20px;
+    font-size: 120px;
+    color: #3498DB22;
+    font-family: Georgia, serif;
+  }
+  .code-compare {
+    display: flex;
+    gap: 32px;
+    width: 100%;
+    margin-top: 16px;
+  }
+  .code-block {
+    flex: 1;
+    background: #161b22;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #30363d;
+  }
+  .code-block .code-header {
+    padding: 14px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border-bottom: 1px solid #30363d;
+    font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+  }
+  .code-block.red .code-header { color: #E74C3C; background: #E74C3C0A; }
+  .code-block.amber .code-header { color: #F39C12; background: #F39C120A; }
+  .code-block pre {
+    padding: 24px;
+    font-size: 20px;
+    line-height: 1.6;
+    font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+    color: #8b949e;
+    white-space: pre-wrap;
+  }
+  .code-block.red pre .highlight { color: #E74C3Ccc; }
+  .code-block.amber pre .highlight { color: #F39C12cc; }
+
+  /* Slide 5 - CTA */
+  #slide5 {
+    background: linear-gradient(160deg, #0d1117 0%, #0f1821 50%, #0d1117 100%);
+    gap: 40px;
+  }
+  #slide5 .cta-heading {
+    font-size: 44px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    line-height: 1.3;
+  }
+  #slide5 .cta-url-box {
+    background: #161b22;
+    border: 2px solid #3498DB44;
+    border-radius: 16px;
+    padding: 28px 48px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.3s;
+  }
+  #slide5 .cta-url-box .arrow {
+    font-size: 36px;
+    color: #3498DB;
+  }
+  #slide5 .cta-url-box .url {
+    font-size: 22px;
+    color: #3498DB;
+    font-weight: 600;
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    word-break: break-all;
+  }
+  #slide5 .features {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #slide5 .features span {
+    background: #161b22;
+    border: 1px solid #30363d;
+    padding: 14px 28px;
+    border-radius: 40px;
+    font-size: 20px;
+    color: #8b949e;
+  }
+  #slide5 .built-with {
+    position: absolute;
+    bottom: 60px;
+    font-size: 18px;
+    color: #484f58;
+  }
+  #slide5 .built-with strong { color: #F39C12; font-weight: 600; }
+
+  /* ========== TWITTER IMAGES ========== */
+  .twitter-img {
+    width: 1600px;
+    height: 900px;
+    background: #0d1117;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Twitter Image 1 - Hero */
+  #twitter1 {
+    display: flex;
+  }
+  #twitter1 .half {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 56px;
+    position: relative;
+  }
+  #twitter1 .half.left {
+    background: linear-gradient(135deg, #E74C3C0D 0%, #0d1117 100%);
+    border-right: 1px solid #222;
+  }
+  #twitter1 .half.right {
+    background: linear-gradient(225deg, #F39C120D 0%, #0d1117 100%);
+  }
+  #twitter1 .half .emoji { font-size: 56px; margin-bottom: 20px; }
+  #twitter1 .half h2 { font-size: 44px; font-weight: 800; margin-bottom: 8px; }
+  #twitter1 .half.left h2 { color: #E74C3C; }
+  #twitter1 .half.right h2 { color: #F39C12; }
+  #twitter1 .half .tagline { font-size: 22px; color: #8b949e; margin-bottom: 32px; font-style: italic; }
+  #twitter1 .half .stats { display: flex; flex-direction: column; gap: 14px; }
+  #twitter1 .half .stats span {
+    font-size: 20px;
+    color: #c9d1d9;
+    padding: 10px 16px;
+    background: #161b2288;
+    border-radius: 8px;
+  }
+  #twitter1 .vs-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #0d1117;
+    border: 2px solid #fff3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: 900;
+    color: #fff;
+    box-shadow: 0 0 60px rgba(255,255,255,0.15);
+  }
+  #twitter1 .bottom-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 18px;
+    text-align: center;
+    font-size: 20px;
+    color: #8b949e;
+    background: #0d1117ee;
+    border-top: 1px solid #222;
+  }
+
+  /* Twitter Image 2 - Architecture Preview */
+  #twitter2 {
+    background: linear-gradient(180deg, #0d1117 0%, #0f1419 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+  }
+  .browser-mockup {
+    width: 1440px;
+    background: #161b22;
+    border-radius: 12px;
+    border: 1px solid #30363d;
+    overflow: hidden;
+    box-shadow: 0 20px 80px rgba(0,0,0,0.5);
+  }
+  .browser-titlebar {
+    display: flex;
+    align-items: center;
+    padding: 14px 20px;
+    background: #0d1117;
+    border-bottom: 1px solid #30363d;
+    gap: 12px;
+  }
+  .browser-dots {
+    display: flex;
+    gap: 8px;
+  }
+  .browser-dots span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+  .browser-dots span:nth-child(1) { background: #E74C3C; }
+  .browser-dots span:nth-child(2) { background: #F39C12; }
+  .browser-dots span:nth-child(3) { background: #27AE60; }
+  .browser-url {
+    flex: 1;
+    background: #161b22;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #8b949e;
+    font-family: 'SF Mono', monospace;
+  }
+  .browser-content {
+    padding: 40px;
+    display: flex;
+    gap: 32px;
+  }
+  .browser-arch-panel {
+    flex: 1;
+    border-radius: 12px;
+    padding: 32px;
+    text-align: center;
+  }
+  .browser-arch-panel.red {
+    background: #E74C3C08;
+    border: 1px solid #E74C3C22;
+  }
+  .browser-arch-panel.amber {
+    background: #F39C1208;
+    border: 1px solid #F39C1222;
+  }
+  .browser-arch-panel h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .browser-arch-panel.red h3 { color: #E74C3C; }
+  .browser-arch-panel.amber h3 { color: #F39C12; }
+  .browser-arch-panel .arch-label {
+    font-size: 16px;
+    color: #8b949e;
+    margin-bottom: 24px;
+  }
+  /* Mini hub-spoke in browser */
+  .mini-hub {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    margin: 0 auto;
+  }
+  .mini-hub .center-dot {
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #E74C3C1A;
+    border: 2px solid #E74C3C44;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 700;
+    color: #E74C3C;
+    z-index: 2;
+  }
+  .mini-hub svg { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; }
+  .mini-hub svg line { stroke: #E74C3C22; stroke-width: 1.5; }
+  .mini-spoke {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #161b22;
+    border: 1px solid #30363d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    z-index: 2;
+  }
+  .mini-spoke:nth-child(2) { top: 4px; left: 118px; }
+  .mini-spoke:nth-child(3) { top: 36px; left: 214px; }
+  .mini-spoke:nth-child(4) { top: 118px; left: 232px; }
+  .mini-spoke:nth-child(5) { top: 208px; left: 214px; }
+  .mini-spoke:nth-child(6) { top: 232px; left: 118px; }
+  .mini-spoke:nth-child(7) { top: 208px; left: 22px; }
+  .mini-spoke:nth-child(8) { top: 118px; left: 4px; }
+  .mini-spoke:nth-child(9) { top: 36px; left: 22px; }
+
+  /* Mini pipeline in browser */
+  .mini-pipeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin: 0 auto;
+  }
+  .mini-pipeline-node {
+    width: 220px;
+    padding: 14px 18px;
+    background: #0d1117;
+    border: 1px solid #F39C1233;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 14px;
+    color: #c9d1d9;
+    font-weight: 600;
+  }
+  .mini-pipeline-arrow {
+    width: 2px;
+    height: 18px;
+    background: #F39C1233;
+    position: relative;
+  }
+  .mini-pipeline-arrow::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #F39C1255;
+  }
+
+  /* ========== OG IMAGE ========== */
+  .og-image {
+    width: 1200px;
+    height: 630px;
+    background: linear-gradient(135deg, #0d1117 0%, #111820 50%, #0d1117 100%);
+    display: flex;
+    position: relative;
+    overflow: hidden;
+  }
+  .og-image .og-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 48px 0 48px 56px;
+    z-index: 2;
+  }
+  .og-image .og-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+  .og-image h1 {
+    font-size: 48px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+  .og-image .og-subtitle {
+    font-size: 22px;
+    color: #8b949e;
+    margin-bottom: 28px;
+  }
+  .og-image .og-tags {
+    display: flex;
+    gap: 12px;
+  }
+  .og-image .og-tags span {
+    background: #161b22;
+    border: 1px solid #30363d;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    color: #8b949e;
+  }
+  .og-vs-graphic {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  .og-vs-card {
+    width: 160px;
+    height: 200px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .og-vs-card.red {
+    background: #E74C3C0D;
+    border: 1.5px solid #E74C3C33;
+  }
+  .og-vs-card.amber {
+    background: #F39C120D;
+    border: 1.5px solid #F39C1233;
+  }
+  .og-vs-card .emoji { font-size: 40px; }
+  .og-vs-card .name { font-size: 18px; font-weight: 700; }
+  .og-vs-card.red .name { color: #E74C3C; }
+  .og-vs-card.amber .name { color: #F39C12; }
+  .og-vs-mid {
+    font-size: 32px;
+    font-weight: 800;
+    color: #fff;
+    text-shadow: 0 0 30px rgba(255,255,255,0.2);
+  }
+  .og-image::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #3498DB08, transparent 70%);
+    z-index: 1;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-title">Assets</span>
+  <a href="#slide1" class="linkedin">LinkedIn 1 — Cover</a>
+  <a href="#slide2" class="linkedin">LinkedIn 2 — Comparison</a>
+  <a href="#slide3" class="linkedin">LinkedIn 3 — Architecture</a>
+  <a href="#slide4" class="linkedin">LinkedIn 4 — Insight</a>
+  <a href="#slide5" class="linkedin">LinkedIn 5 — CTA</a>
+  <a href="#twitter1" class="twitter">Twitter 1 — Hero</a>
+  <a href="#twitter2" class="twitter">Twitter 2 — Preview</a>
+  <a href="#og-image" class="og">OG Image</a>
+</nav>
+
+<!-- ==================== LINKEDIN SLIDES ==================== -->
+
+<!-- Slide 1: Cover -->
+<div class="section-wrapper" id="slide1-section">
+  <div class="section-label">LinkedIn Slide 1 — Cover <span class="dims">1080 &times; 1350</span></div>
+  <div class="card linkedin-slide" id="slide1">
+    <div class="top-label">Interactive Learning Experience</div>
+    <h1>OpenClaw<br>vs<br>Claude Code</h1>
+    <div class="subtitle">Two approaches to AI assistants, compared.</div>
+    <div class="title-row">
+      <div class="vs-block red">
+        <div class="emoji">🦞</div>
+        <div class="name">OpenClaw</div>
+      </div>
+      <div class="vs-divider">VS</div>
+      <div class="vs-block amber">
+        <div class="emoji" style="font-family: 'SF Mono', monospace; font-size: 64px; color: #F39C12;">&gt;_</div>
+        <div class="name">Claude Code</div>
+      </div>
+    </div>
+    <div class="footer-tags">
+      <span>30 min</span>
+      <span>Free</span>
+      <span>Evidence-based</span>
+    </div>
+  </div>
+</div>
+
+<!-- Slide 2: Comparison -->
+<div class="section-wrapper" id="slide2-section">
+  <div class="section-label">LinkedIn Slide 2 — The Comparison <span class="dims">1080 &times; 1350</span></div>
+  <div class="card linkedin-slide" id="slide2">
+    <h2>The Comparison</h2>
+    <div class="comparison-grid">
+      <div class="compare-col red">
+        <h3>🦞 OpenClaw</h3>
+        <div class="tagline">Always-on butler</div>
+        <ul>
+          <li>157K GitHub stars</li>
+          <li>13+ channels</li>
+          <li>MIT open source</li>
+          <li>Free (BYOK)</li>
+          <li>Persistent memory</li>
+          <li>Multi-modal support</li>
+        </ul>
+      </div>
+      <div class="compare-col amber">
+        <h3>&gt;_ Claude Code</h3>
+        <div class="tagline">On-demand craftsman</div>
+        <ul>
+          <li>67K GitHub stars</li>
+          <li>6 surfaces</li>
+          <li>Proprietary</li>
+          <li>$2.5B+ ARR</li>
+          <li>Agentic coding</li>
+          <li>Deep tool integration</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Slide 3: Architecture -->
+<div class="section-wrapper" id="slide3-section">
+  <div class="section-label">LinkedIn Slide 3 — Architecture <span class="dims">1080 &times; 1350</span></div>
+  <div class="card linkedin-slide" id="slide3">
+    <h2>Architecture Comparison</h2>
+    <div class="arch-grid">
+      <div class="arch-panel red">
+        <h3>OpenClaw</h3>
+        <div class="arch-subtitle">Hub-and-Spoke</div>
+        <div class="arch-diagram">
+          <div class="hub-spoke">
+            <svg viewBox="0 0 380 380">
+              <line x1="190" y1="190" x2="190" y2="48" />
+              <line x1="190" y1="190" x2="316" y2="90" />
+              <line x1="190" y1="190" x2="336" y2="190" />
+              <line x1="190" y1="190" x2="316" y2="300" />
+              <line x1="190" y1="190" x2="190" y2="336" />
+              <line x1="190" y1="190" x2="64" y2="300" />
+              <line x1="190" y1="190" x2="44" y2="190" />
+              <line x1="190" y1="190" x2="64" y2="90" />
+            </svg>
+            <div class="hub-center">CORE</div>
+            <div class="spoke-node">💬</div>
+            <div class="spoke-node">📱</div>
+            <div class="spoke-node">🎮</div>
+            <div class="spoke-node">📧</div>
+            <div class="spoke-node">🐦</div>
+            <div class="spoke-node">📞</div>
+            <div class="spoke-node">🌐</div>
+            <div class="spoke-node">🔌</div>
+          </div>
+        </div>
+      </div>
+      <div class="arch-panel amber">
+        <h3>Claude Code</h3>
+        <div class="arch-subtitle">Linear Pipeline</div>
+        <div class="arch-diagram">
+          <div class="pipeline">
+            <div class="pipeline-node">User Prompt</div>
+            <div class="pipeline-arrow"></div>
+            <div class="pipeline-node">Agent Loop</div>
+            <div class="pipeline-arrow"></div>
+            <div class="pipeline-node">Tool Execution</div>
+            <div class="pipeline-arrow"></div>
+            <div class="pipeline-node">Code Changes</div>
+            <div class="pipeline-arrow"></div>
+            <div class="pipeline-node">Verification</div>
+            <div class="pipeline-arrow"></div>
+            <div class="pipeline-node">Output</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Slide 4: Key Insight -->
+<div class="section-wrapper" id="slide4-section">
+  <div class="section-label">LinkedIn Slide 4 — Key Insight <span class="dims">1080 &times; 1350</span></div>
+  <div class="card linkedin-slide" id="slide4">
+    <div class="quote">One has a soul.<br>The other has a settings file.</div>
+    <div class="code-compare">
+      <div class="code-block red">
+        <div class="code-header">// SOUL.md</div>
+        <pre><span class="highlight">"You're not a chatbot.
+ You're becoming someone."</span>
+
+Personality, memory,
+emotional awareness.
+
+Your AI <span class="highlight">becomes</span> something
+over time.</pre>
+      </div>
+      <div class="code-block amber">
+        <div class="code-header">// CLAUDE.md</div>
+        <pre><span class="highlight">## Technical Preferences</span>
+- Automate everything
+- Use claude --chrome
+- Never use GPT-4o
+
+<span class="highlight">## Safety</span>
+- Specific PIDs only
+- Never kill patterns</pre>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Slide 5: CTA -->
+<div class="section-wrapper" id="slide5-section">
+  <div class="section-label">LinkedIn Slide 5 — CTA <span class="dims">1080 &times; 1350</span></div>
+  <div class="card linkedin-slide" id="slide5">
+    <div class="cta-heading">Try the interactive<br>learning experience</div>
+    <div class="cta-url-box">
+      <div class="arrow">&#10132;</div>
+      <div class="url">sebastiandoyle.github.io/<br>openclaw-vs-claude-code</div>
+    </div>
+    <div class="features">
+      <span>30 minutes</span>
+      <span>Quizzes</span>
+      <span>Diagrams</span>
+      <span>Code walkthroughs</span>
+    </div>
+    <div class="built-with">Built with <strong>Claude Code</strong></div>
+  </div>
+</div>
+
+<!-- ==================== TWITTER IMAGES ==================== -->
+
+<!-- Twitter Image 1: Hero -->
+<div class="section-wrapper" id="twitter1-section">
+  <div class="section-label">Twitter Image 1 — Hero <span class="dims">1600 &times; 900</span></div>
+  <div class="card twitter-img" id="twitter1">
+    <div class="half left">
+      <div class="emoji">🦞</div>
+      <h2>OpenClaw</h2>
+      <div class="tagline">Always-on AI butler</div>
+      <div class="stats">
+        <span>157K GitHub stars</span>
+        <span>13+ channels</span>
+        <span>MIT open source</span>
+        <span>Free (BYOK)</span>
+      </div>
+    </div>
+    <div class="half right">
+      <div class="emoji" style="font-family: 'SF Mono', monospace; font-size: 48px; color: #F39C12;">&gt;_</div>
+      <h2>Claude Code</h2>
+      <div class="tagline">On-demand coding agent</div>
+      <div class="stats">
+        <span>67K GitHub stars</span>
+        <span>6 surfaces</span>
+        <span>Proprietary</span>
+        <span>$2.5B+ ARR</span>
+      </div>
+    </div>
+    <div class="vs-center">VS</div>
+    <div class="bottom-bar">Interactive Learning Experience &nbsp;|&nbsp; 30 min &nbsp;|&nbsp; Free</div>
+  </div>
+</div>
+
+<!-- Twitter Image 2: Architecture Preview -->
+<div class="section-wrapper" id="twitter2-section">
+  <div class="section-label">Twitter Image 2 — Architecture Preview <span class="dims">1600 &times; 900</span></div>
+  <div class="card twitter-img" id="twitter2">
+    <div class="browser-mockup">
+      <div class="browser-titlebar">
+        <div class="browser-dots"><span></span><span></span><span></span></div>
+        <div class="browser-url">sebastiandoyle.github.io/openclaw-vs-claude-code</div>
+      </div>
+      <div class="browser-content">
+        <div class="browser-arch-panel red">
+          <h3>🦞 OpenClaw</h3>
+          <div class="arch-label">Hub-and-Spoke Architecture</div>
+          <div class="mini-hub">
+            <svg viewBox="0 0 280 280">
+              <line x1="140" y1="140" x2="140" y2="26" />
+              <line x1="140" y1="140" x2="236" y2="58" />
+              <line x1="140" y1="140" x2="254" y2="140" />
+              <line x1="140" y1="140" x2="236" y2="230" />
+              <line x1="140" y1="140" x2="140" y2="254" />
+              <line x1="140" y1="140" x2="44" y2="230" />
+              <line x1="140" y1="140" x2="26" y2="140" />
+              <line x1="140" y1="140" x2="44" y2="58" />
+            </svg>
+            <div class="center-dot">CORE</div>
+            <div class="mini-spoke">💬</div>
+            <div class="mini-spoke">📱</div>
+            <div class="mini-spoke">🎮</div>
+            <div class="mini-spoke">📧</div>
+            <div class="mini-spoke">🐦</div>
+            <div class="mini-spoke">📞</div>
+            <div class="mini-spoke">🌐</div>
+            <div class="mini-spoke">🔌</div>
+          </div>
+        </div>
+        <div class="browser-arch-panel amber">
+          <h3>&gt;_ Claude Code</h3>
+          <div class="arch-label">Linear Pipeline Architecture</div>
+          <div class="mini-pipeline">
+            <div class="mini-pipeline-node">User Prompt</div>
+            <div class="mini-pipeline-arrow"></div>
+            <div class="mini-pipeline-node">Agent Loop</div>
+            <div class="mini-pipeline-arrow"></div>
+            <div class="mini-pipeline-node">Tool Execution</div>
+            <div class="mini-pipeline-arrow"></div>
+            <div class="mini-pipeline-node">Code Changes</div>
+            <div class="mini-pipeline-arrow"></div>
+            <div class="mini-pipeline-node">Output</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== OG IMAGE ==================== -->
+
+<div class="section-wrapper" id="og-image-section">
+  <div class="section-label">OG Preview Image <span class="dims">1200 &times; 630</span></div>
+  <div class="card og-image" id="og-image">
+    <div class="og-left">
+      <h1>OpenClaw vs<br>Claude Code</h1>
+      <div class="og-subtitle">Interactive Learning Experience</div>
+      <div class="og-tags">
+        <span>30 min</span>
+        <span>Free</span>
+        <span>Quizzes</span>
+      </div>
+    </div>
+    <div class="og-right">
+      <div class="og-vs-graphic">
+        <div class="og-vs-card red">
+          <div class="emoji">🦞</div>
+          <div class="name">OpenClaw</div>
+        </div>
+        <div class="og-vs-mid">VS</div>
+        <div class="og-vs-card amber">
+          <div class="emoji" style="font-family: 'SF Mono', monospace; font-size: 36px; color: #F39C12;">&gt;_</div>
+          <div class="name">Claude Code</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

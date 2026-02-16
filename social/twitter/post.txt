@@ -1,0 +1,9 @@
+Built an interactive learning experience comparing OpenClaw and Claude Code
+
+Two very different approaches to AI assistants:
+- OpenClaw: always-on, 13+ channels, has a soul file
+- Claude Code: on-demand terminal agent, pure coding power
+
+30 min of quizzes, diagrams, and code walkthroughs
+
+https://sebastiandoyle.github.io/openclaw-vs-claude-code
